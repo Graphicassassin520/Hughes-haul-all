@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hughes Hauls All | Cookville, TN Hauling & Junk Removal</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-p7DkE0FxqBPW74JdCjtd4N1vjk/4eQKJQYq3UQeNPf0VHvTv9S8Ib5wd3CKeCrGtMMPki0Pb92PBrZB8XH7NA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Define Color Variables */
+    /* Color Variables */
     :root {
       --tn-orange: #FF8200;
       --tn-orange-hover: #e67300;
@@ -28,6 +32,11 @@
       color: inherit;
       text-decoration: none;
     }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
 
     /* Header & Navigation */
     header {
@@ -39,9 +48,6 @@
       border-bottom: 3px solid var(--tn-orange);
     }
     header .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,12 +93,55 @@
       background: var(--tn-orange);
     }
 
-    /* Section Styles */
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url("https://source.unsplash.com/1600x900/?truck,hauling,removal") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+    .hero-content h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: var(--tn-orange);
+      color: var(--white);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--tn-orange-hover);
+    }
+
+    /* Section Base Styles */
     section {
       padding: 60px 0;
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -112,9 +161,50 @@
       margin: 20px 0 10px;
       font-size: 1.5em;
     }
+    h3 i {
+      margin-right: 10px;
+      color: var(--tn-orange);
+    }
     p {
       margin-bottom: 15px;
       font-size: 1.1em;
+    }
+    /* How It Works List Icons */
+    #how-it-works li i {
+      margin-right: 10px;
+      color: var(--tn-orange);
+    }
+
+    /* Services Section - Grid Layout */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .service-item {
+      background: var(--white);
+      border: 1px solid var(--tn-orange);
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+    .service-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .service-item h3 {
+      padding: 15px;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+    .service-item p {
+      padding: 0 15px 15px;
+      font-size: 1em;
     }
 
     /* Contact Form */
@@ -233,64 +323,83 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Welcome to Hughes Hauls All</h2>
-    <p>
-      Are you overwhelmed by clutter? Do you have items that need to be hauled away but don’t have a truck? Whether you’re dealing with years of accumulated junk, unwanted old furniture or mattresses, a cluttered garage or shed, or even a rental property in need of a clear-out, we’re here to help!
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h2>Welcome to Hughes Hauls All</h2>
+      <p>Your Trusted Hauling &amp; Junk Removal Experts in Cookville, TN</p>
+      <a href="#contact" class="btn">Get a Free Quote</a>
+    </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services Section with Free Stock Photos -->
   <section id="services">
-    <h2>Our Services</h2>
-    <h3>Residential Junk Removal</h3>
-    <p>
-      Tired of living with clutter? We’ll help you reclaim your home, garage, or shed by removing unwanted items efficiently and responsibly.
-    </p>
-    <h3>Furniture &amp; Mattress Disposal</h3>
-    <p>
-      Upgrading your home or just need to dispose of old, bulky items? We handle the heavy lifting and proper disposal of furniture, mattresses, and more.
-    </p>
-    <h3>Rental Property Cleanouts</h3>
-    <p>
-      Prepare your property for new tenants or get rid of accumulated clutter. Our team is experienced in making rental property turnovers smooth and hassle-free.
-    </p>
-    <h3>Commercial Hauling</h3>
-    <p>
-      From office cleanouts to property management projects, we provide comprehensive hauling services for businesses throughout Cookville and the surrounding areas.
-    </p>
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?junk-removal,home" alt="Residential Junk Removal">
+          <h3><i class="fas fa-home"></i>Residential Junk Removal</h3>
+          <p>
+            Tired of living with clutter? We’ll help you reclaim your home, garage, or shed by removing unwanted items efficiently and responsibly.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?furniture,removal" alt="Furniture & Mattress Disposal">
+          <h3><i class="fas fa-couch"></i>Furniture &amp; Mattress Disposal</h3>
+          <p>
+            Upgrading your home or simply need to dispose of bulky items? We handle the heavy lifting and proper disposal of furniture, mattresses, and more.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?property,cleaning" alt="Rental Property Cleanouts">
+          <h3><i class="fas fa-building"></i>Rental Property Cleanouts</h3>
+          <p>
+            Prepare your property for new tenants or eliminate accumulated clutter. Our team makes rental property turnovers smooth and hassle‑free.
+          </p>
+        </div>
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?truck,hauling" alt="Commercial Hauling">
+          <h3><i class="fas fa-truck"></i>Commercial Hauling</h3>
+          <p>
+            From office cleanouts to property management projects, we provide comprehensive hauling services for businesses throughout Cookville and the surrounding areas.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- How It Works Section -->
   <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li><strong>Request a Free Quote:</strong> Contact us today to discuss your needs and receive a free, no-obligation estimate.</li>
-      <li><strong>Schedule Your Service:</strong> We work around your schedule to plan a convenient pick-up time.</li>
-      <li><strong>Sit Back &amp; Relax:</strong> Our professional team arrives on time, handles all the heavy lifting, and ensures your space is left clean and clutter‑free.</li>
-      <li><strong>Enjoy Your New Space:</strong> With your unwanted items gone, you can enjoy a more organized, stress‑free environment.</li>
-    </ol>
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol>
+        <li><i class="fas fa-envelope"></i><strong>Request a Free Quote:</strong> Contact us today to discuss your needs and receive a free, no‑obligation estimate.</li>
+        <li><i class="fas fa-calendar-alt"></i><strong>Schedule Your Service:</strong> We work around your schedule to plan a convenient pick‑up time.</li>
+        <li><i class="fas fa-chair"></i><strong>Sit Back &amp; Relax:</strong> Our professional team arrives on time, handles all the heavy lifting, and ensures your space is left clean and clutter‑free.</li>
+        <li><i class="fas fa-thumbs-up"></i><strong>Enjoy Your New Space:</strong> With your unwanted items gone, you can enjoy a more organized, stress‑free environment.</li>
+      </ol>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Ready to Declutter?</h2>
-    <p>
-      Don’t let unwanted items take over your space. At Hughes Hauls All, we’re passionate about helping you simplify your life with efficient, reliable hauling services. Contact us today for your free quote and take the first step towards a cleaner, clutter‑free home or business!
-    </p>
-    <div class="contact-form">
-      <form action="https://example.com/submit-form" method="post" id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="submit" value="Send Message" />
-      </form>
+    <div class="container">
+      <h2>Ready to Declutter?</h2>
+      <p>
+        Don’t let unwanted items take over your space. At Hughes Hauls All, we’re passionate about helping you simplify your life with efficient, reliable hauling services. Contact us today for your free quote and take the first step toward a cleaner, clutter‑free home or business!
+      </p>
+      <div class="contact-form">
+        <form action="https://example.com/submit-form" method="post" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+      </div>
     </div>
   </section>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" title="Back to Top">&#8679;</button>
 
   <!-- Footer -->
   <footer>
@@ -300,18 +409,20 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
   <!-- JavaScript Enhancements -->
   <script>
     // Mobile Navigation Toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
 
     // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('nav a').forEach(anchor => {
+    document.querySelectorAll('nav a, .btn').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetSection = document.querySelector(this.getAttribute('href'));
@@ -328,7 +439,6 @@
     const observerOptions = {
       threshold: 0.2
     };
-
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -337,14 +447,12 @@
         }
       });
     }, observerOptions);
-
     sections.forEach(section => {
       observer.observe(section);
     });
 
     // Back to Top Button Functionality
     const backToTopBtn = document.getElementById('back-to-top');
-
     window.addEventListener('scroll', () => {
       if (window.pageYOffset > 300) {
         backToTopBtn.style.display = 'block';
@@ -352,7 +460,6 @@
         backToTopBtn.style.display = 'none';
       }
     });
-
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
