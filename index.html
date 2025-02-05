@@ -152,6 +152,7 @@
     /* Section Base Styles */
     section {
       padding: 60px 0;
+      /* Initially hidden for fade‑in effect */
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -543,13 +544,16 @@
       });
     });
 
-    // Intersection Observer for Fade-In Animation with Fallback
+    // Intersection Observer for Fade-In Animation
     const sections = document.querySelectorAll('section');
     if ('IntersectionObserver' in window) {
-      const observerOptions = { threshold: 0.2, rootMargin: "-80px 0px 0px 0px" };
+      const observerOptions = {
+        threshold: 0.1, // lower threshold to trigger sooner
+        rootMargin: "0px"
+      };
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
@@ -562,6 +566,10 @@
       // Fallback: Make all sections visible if IntersectionObserver is not supported
       sections.forEach(section => section.classList.add('visible'));
     }
+    // Fallback: Force all sections visible after 1 second (in case observer doesn't trigger)
+    setTimeout(() => {
+      sections.forEach(section => section.classList.add('visible'));
+    }, 1000);
 
     // Scroll Progress Indicator
     const progressBar = document.getElementById('scroll-progress');
