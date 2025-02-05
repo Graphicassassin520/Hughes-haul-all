@@ -149,17 +149,12 @@
     .btn:hover {
       background: var(--tn-orange-hover);
     }
-    /* Section Base Styles */
+    /* Section Base Styles (Fade-in effect removed by default) */
     section {
       padding: 60px 0;
-      /* Initially hidden for fade‑in effect */
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    section.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: none;
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
     h2 {
       text-align: center;
@@ -543,33 +538,6 @@
         }
       });
     });
-
-    // Intersection Observer for Fade-In Animation
-    const sections = document.querySelectorAll('section');
-    if ('IntersectionObserver' in window) {
-      const observerOptions = {
-        threshold: 0.1, // lower threshold to trigger sooner
-        rootMargin: "0px"
-      };
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-      sections.forEach(section => {
-        observer.observe(section);
-      });
-    } else {
-      // Fallback: Make all sections visible if IntersectionObserver is not supported
-      sections.forEach(section => section.classList.add('visible'));
-    }
-    // Fallback: Force all sections visible after 1 second (in case observer doesn't trigger)
-    setTimeout(() => {
-      sections.forEach(section => section.classList.add('visible'));
-    }, 1000);
 
     // Scroll Progress Indicator
     const progressBar = document.getElementById('scroll-progress');
