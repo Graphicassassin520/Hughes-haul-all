@@ -23,7 +23,7 @@
       line-height: 1.6;
       color: var(--dark-gray);
       background: var(--white);
-      padding-top: 80px;
+      padding-top: 70px;
     }
     a {
       color: inherit;
@@ -51,8 +51,9 @@
       align-items: center;
     }
     .nav-toggle {
-      display: none;
+      font-size: 1.8em;
       cursor: pointer;
+      display: none;
     }
     nav ul {
       list-style: none;
@@ -76,15 +77,19 @@
     @media (max-width: 768px) {
       .nav-toggle {
         display: block;
-        font-size: 1.5em;
-        cursor: pointer;
       }
       nav ul {
         flex-direction: column;
         display: none;
+        text-align: center;
       }
       nav.active ul {
-        display: flex;
+        display: block;
+        background: var(--white);
+        padding: 15px;
+      }
+      nav ul li {
+        margin: 10px 0;
       }
     }
     /* Hero Section */
@@ -217,6 +222,7 @@
   </section>
 
   <script>
+    // Mobile Navigation Toggle
     document.getElementById('nav-toggle').addEventListener('click', function() {
       document.getElementById('nav-menu').classList.toggle('active');
     });
