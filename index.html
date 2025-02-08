@@ -24,16 +24,16 @@
       line-height: 1.6;
       color: var(--dark-gray);
       background: var(--white);
+      padding-top: 70px;
     }
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
     }
-    /* Header and Navigation */
+    /* Navigation */
     header {
       background: var(--white);
-      color: var(--tn-orange);
       padding: 15px 0;
       position: fixed;
       top: 0;
@@ -145,33 +145,6 @@
       padding: 15px;
       color: var(--tn-orange);
     }
-    /* Testimonials Section */
-    .testimonials {
-      background: var(--light-gray);
-      padding: 50px 0;
-      text-align: center;
-    }
-    .testimonial {
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-    /* FAQ Section */
-    .faq {
-      padding: 50px 0;
-    }
-    .faq-question {
-      font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    .faq-answer {
-      display: none;
-      padding: 10px;
-      background: var(--light-gray);
-      border-radius: 5px;
-    }
     /* Contact Form */
     .contact-form {
       background: var(--light-gray);
@@ -202,8 +175,6 @@
   <nav id="nav-menu">
     <ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -224,19 +195,38 @@
           <img src="https://unsplash.com/photos/D56TpVU8zng/download?force=true&w=600" alt="Junk Removal">
           <h3>Residential Junk Removal</h3>
         </div>
+        <div class="service-item">
+          <img src="https://unsplash.com/photos/zcbb_xq8ArM/download?force=true&w=600" alt="Furniture & Mattress Disposal">
+          <h3>Furniture & Mattress Disposal</h3>
+        </div>
+        <div class="service-item">
+          <img src="https://unsplash.com/photos/NzFgmXfH1MQ/download?force=true&w=600" alt="Rental Property Cleanouts">
+          <h3>Rental Property Cleanouts</h3>
+        </div>
+        <div class="service-item">
+          <img src="https://unsplash.com/photos/OFMdXEN2Otc/download?force=true&w=600" alt="Commercial Hauling">
+          <h3>Commercial Hauling</h3>
+        </div>
       </div>
     </div>
   </section>
 
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
+
   <script>
+    // Mobile Navigation Toggle
     document.getElementById('nav-toggle').addEventListener('click', function() {
       document.getElementById('nav-menu').classList.toggle('active');
-    });
-    
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        question.nextElementSibling.style.display = question.nextElementSibling.style.display === 'block' ? 'none' : 'block';
-      });
     });
   </script>
 </body>
