@@ -104,6 +104,25 @@
       color: var(--white);
       background: var(--tn-orange);
     }
+    /* Mobile Navigation */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        display: none;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      nav.active ul {
+        display: flex;
+      }
+    }
     /* Hero Section */
     .hero {
       position: relative;
@@ -122,7 +141,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
     }
     .hero-content {
       position: relative;
@@ -380,25 +399,6 @@
     #back-to-top:hover {
       background: var(--tn-orange-hover);
     }
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      nav ul {
-        flex-direction: column;
-        display: none;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-      nav.active ul {
-        display: flex;
-      }
-    }
   </style>
 </head>
 <body>
@@ -436,28 +436,28 @@
       <a href="#contact" class="btn">Get a Free Quote</a>
     </div>
   </section>
-  <!-- Services Section with Free Stock Photos -->
+  <!-- Services Section with Unsplash Images -->
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-item">
-          <img src="https://source.unsplash.com/600x400/?junkremoval,home" alt="Residential Junk Removal" loading="lazy">
+          <img src="https://unsplash.com/photos/6sAl6aQ4OWI/download?force=true&w=600" alt="Residential Junk Removal" loading="lazy">
           <h3><i class="fas fa-home"></i>Residential Junk Removal</h3>
           <p>Tired of living with clutter? We’ll help you reclaim your home, garage, or shed by removing unwanted items efficiently and responsibly.</p>
         </div>
         <div class="service-item">
-          <img src="https://source.unsplash.com/600x400/?furniture,removal" alt="Furniture & Mattress Disposal" loading="lazy">
+          <img src="https://unsplash.com/photos/jFCViYFYcus/download?force=true&w=600" alt="Furniture & Mattress Disposal" loading="lazy">
           <h3><i class="fas fa-couch"></i>Furniture &amp; Mattress Disposal</h3>
           <p>Upgrading your home or simply need to dispose of bulky items? We handle the heavy lifting and proper disposal of furniture, mattresses, and more.</p>
         </div>
         <div class="service-item">
-          <img src="https://source.unsplash.com/600x400/?property,cleaning" alt="Rental Property Cleanouts" loading="lazy">
+          <img src="https://unsplash.com/photos/JmuyB_LibRo/download?force=true&w=600" alt="Rental Property Cleanouts" loading="lazy">
           <h3><i class="fas fa-building"></i>Rental Property Cleanouts</h3>
           <p>Prepare your property for new tenants or eliminate accumulated clutter. Our team makes rental property turnovers smooth and hassle‑free.</p>
         </div>
         <div class="service-item">
-          <img src="https://source.unsplash.com/600x400/?truck,hauling" alt="Commercial Hauling" loading="lazy">
+          <img src="https://unsplash.com/photos/dBI_My696Rk/download?force=true&w=600" alt="Commercial Hauling" loading="lazy">
           <h3><i class="fas fa-truck"></i>Commercial Hauling</h3>
           <p>From office cleanouts to property management projects, we provide comprehensive hauling services for businesses throughout Cookville and the surrounding areas.</p>
         </div>
@@ -530,14 +530,12 @@
   <section id="blog">
     <div class="container">
       <h2>Our Blog</h2>
-
       <!-- Blog Article 1 -->
       <article class="blog-article">
         <h3>The Ultimate Guide to Junk Removal in Cookville, TN: Tips for a Clutter-Free Home</h3>
         <p>Are you feeling overwhelmed by clutter in your Cookville home? In this ultimate guide, we share expert advice on how to plan and execute a successful junk removal process. Learn the steps to sort, donate, recycle, and dispose of unwanted items so you can enjoy a clutter-free space.</p>
         <p>Our guide covers everything from identifying the items you no longer need to preparing your home for a professional haul. Whether you’re a homeowner or renter, these tips will help you take control of your space and start your journey toward a cleaner, more organized home.</p>
       </article>
-
       <!-- Blog Article 2 -->
       <article class="blog-article">
         <h3>5 Essential Steps to Prepare Your Home for Professional Hauling Services</h3>
@@ -550,7 +548,6 @@
         </ol>
         <p>Following these five steps will streamline the process and help ensure that your hauling service is efficient and hassle‑free.</p>
       </article>
-
       <!-- Blog Article 3 -->
       <article class="blog-article">
         <h3>Decluttering Your Space: Top 10 Tips for a Stress-Free Home Transformation</h3>
@@ -568,14 +565,12 @@
         </ol>
         <p>These ten tips will guide you through transforming your home into a stress‑free, organized space that you can truly enjoy.</p>
       </article>
-
       <!-- Blog Article 4 -->
       <article class="blog-article">
         <h3>How Professional Junk Removal Benefits Rental Property Owners in Cookville, TN</h3>
         <p>Rental property owners often face the challenge of quickly turning over properties for new tenants. Professional junk removal not only declutters the space but also enhances the property's appeal and safety.</p>
         <p>By investing in expert hauling services, landlords can speed up property turnover, reduce vacancy periods, and maintain a clean, welcoming environment that attracts quality tenants. Our team ensures that all items are disposed of responsibly—helping you save time and money while boosting your rental property’s marketability.</p>
       </article>
-
       <!-- Blog Article 5 -->
       <article class="blog-article">
         <h3>Eco-Friendly Junk Removal: How We Recycle and Donate to Give Back to Cookville, TN</h3>
