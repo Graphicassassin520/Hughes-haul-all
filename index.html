@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hughes Hauls All | Cookville, TN Hauling & Junk Removal</title>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-p7DkE0FxqBPW74JdCjtd4N1vjk/4eQKJQYq3UQeNPf0VHvTv9S8Ib5wd3CKeCrGtMMPki0Pb92PBrZB8XH7NA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hughes Hauls All | Junk Removal in Cookville, TN</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Color Variables */
     :root {
       --tn-orange: #FF8200;
       --tn-orange-hover: #e67300;
       --white: #fff;
     }
-    /* Basic Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Arial', sans-serif;
       line-height: 1.6;
       color: #333;
       background: var(--white);
-      /* Top padding to account for fixed header */
       padding-top: 80px;
     }
     a {
@@ -38,17 +33,7 @@
       max-width: 1100px;
       margin: auto;
     }
-    /* Scroll Progress Indicator */
-    #scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: var(--tn-orange);
-      width: 0%;
-      z-index: 9999;
-    }
-    /* Header & Navigation */
+    /* Navigation */
     header {
       background: var(--white);
       color: var(--tn-orange);
@@ -64,24 +49,9 @@
       justify-content: space-between;
       align-items: center;
     }
-    header h1 {
-      font-size: 2.2em;
-    }
     .nav-toggle {
       display: none;
       cursor: pointer;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: var(--tn-orange);
-      margin: 5px 0;
-      transition: all 0.3s ease;
-    }
-    nav {
-      background: var(--white);
-      border-bottom: 1px solid var(--tn-orange);
     }
     nav ul {
       list-style: none;
@@ -96,7 +66,6 @@
       font-size: 1.1em;
       font-weight: bold;
       color: var(--tn-orange);
-      transition: color 0.3s ease, background 0.3s ease;
       padding: 5px 10px;
       border-radius: 3px;
     }
@@ -104,11 +73,7 @@
       color: var(--white);
       background: var(--tn-orange);
     }
-    /* Mobile Navigation */
     @media (max-width: 768px) {
-      header .container {
-        flex-direction: column;
-      }
       .nav-toggle {
         display: block;
       }
@@ -116,18 +81,13 @@
         flex-direction: column;
         display: none;
       }
-      nav ul li {
-        margin: 10px 0;
-      }
       nav.active ul {
         display: flex;
       }
     }
     /* Hero Section */
     .hero {
-      position: relative;
       height: 100vh;
-      /* Using the Unsplash download URL with forced download and width parameter */
       background: url("https://unsplash.com/photos/5IJ9UaT6tLk/download?force=true&w=1600") no-repeat center center/cover;
       display: flex;
       align-items: center;
@@ -136,106 +96,41 @@
       color: var(--white);
     }
     .hero-overlay {
+      background: rgba(0,0,0,0.5);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
     }
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 20px;
-    }
-    .hero-content h2 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-    .hero-content p {
-      font-size: 1.5em;
-      margin-bottom: 30px;
     }
     .btn {
       background: var(--tn-orange);
       color: var(--white);
       padding: 15px 30px;
-      border: none;
       border-radius: 5px;
-      font-size: 1.2em;
-      text-decoration: none;
-      transition: background 0.3s ease;
     }
     .btn:hover {
       background: var(--tn-orange-hover);
     }
-    /* Section Base Styles */
-    section {
-      padding: 60px 0;
-      opacity: 1;
-      transform: none;
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: var(--tn-orange);
-    }
-    h3 {
-      color: var(--tn-orange);
-      margin: 20px 0 10px;
-      font-size: 1.5em;
-    }
-    h3 i {
-      margin-right: 10px;
-      color: var(--tn-orange);
-    }
-    p {
-      margin-bottom: 15px;
-      font-size: 1.1em;
-    }
-    /* How It Works List Icons */
-    #how-it-works li i {
-      margin-right: 10px;
-      color: var(--tn-orange);
-    }
-    /* Services Section - Grid Layout */
+    /* Services Section */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
-    .service-item {
-      background: var(--white);
-      border: 1px solid var(--tn-orange);
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .service-item:hover {
-      transform: translateY(-5px);
-    }
     .service-item img {
       width: 100%;
       height: auto;
-      display: block;
     }
     .service-item h3 {
       padding: 15px;
-      font-size: 1.4em;
-      margin-bottom: 10px;
+      color: var(--tn-orange);
     }
-    .service-item p {
-      padding: 0 15px 15px;
-      font-size: 1em;
-    }
-    /* Testimonials Section */
-    .testimonials {
-      position: relative;
-      overflow: hidden;
-    }
+    /* Testimonials */
     .testimonial-carousel {
       display: flex;
       transition: transform 0.5s ease-in-out;
@@ -245,460 +140,75 @@
       padding: 20px;
       text-align: center;
     }
-    .testimonial p {
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-    .testimonial h4 {
-      font-weight: bold;
-      color: var(--tn-orange);
-    }
-    .testimonial-controls {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .testimonial-controls button {
-      background: var(--tn-orange);
-      color: var(--white);
-      border: none;
-      padding: 10px;
-      margin: 0 5px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .testimonial-controls button:hover {
-      background: var(--tn-orange-hover);
-    }
-    /* FAQ Section */
-    .faq-item {
-      border-bottom: 1px solid #ccc;
-      padding: 10px 0;
-    }
-    .faq-question {
-      font-size: 1.2em;
-      cursor: pointer;
-      position: relative;
-      padding-right: 25px;
-    }
-    .faq-question::after {
-      content: "\f078";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      position: absolute;
-      right: 0;
-      transition: transform 0.3s ease;
-    }
-    .faq-question.active::after {
-      transform: rotate(180deg);
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .faq-item.active .faq-answer {
-      max-height: 200px;
-      margin-top: 10px;
-    }
-    /* Blog Section */
-    #blog {
-      background: #f9f9f9;
-      padding: 60px 0;
-    }
-    .blog-article {
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-    }
-    .blog-article h3 {
-      margin-bottom: 15px;
-      font-size: 1.8em;
-    }
-    .blog-article p, 
-    .blog-article ul, 
-    .blog-article ol {
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .blog-article ul {
-      list-style: disc;
-      margin-left: 20px;
-    }
-    .blog-article ol {
-      list-style: decimal;
-      margin-left: 20px;
-    }
     /* Contact Form */
-    .contact-form {
-      max-width: 600px;
-      margin: 20px auto;
-      background: var(--white);
-      padding: 20px;
-      border-radius: 5px;
-      border: 1px solid var(--tn-orange);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
+    .contact-form input,
     .contact-form textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
-      border: 1px solid #bdc3c7;
-      border-radius: 4px;
-      font-size: 1em;
-    }
-    .contact-form input[type="text"]:focus,
-    .contact-form input[type="email"]:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--tn-orange);
     }
     .contact-form input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
       background: var(--tn-orange);
       color: var(--white);
-      font-size: 1.1em;
       cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .contact-form input[type="submit"]:hover {
-      background: var(--tn-orange-hover);
-    }
-    /* Footer */
-    footer {
-      background: var(--tn-orange);
-      color: var(--white);
-      text-align: center;
-      padding: 20px 0;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-    /* Back to Top Button */
-    #back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--tn-orange);
-      color: var(--white);
-      padding: 10px 15px;
-      border: none;
-      border-radius: 50%;
-      font-size: 1.2em;
-      cursor: pointer;
-      display: none;
-      z-index: 1000;
-      transition: background 0.3s ease;
-    }
-    #back-to-top:hover {
-      background: var(--tn-orange-hover);
     }
   </style>
 </head>
 <body>
-  <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress"></div>
-  
-  <!-- Header with Mobile Navigation Toggle -->
   <header>
     <div class="container">
       <h1>Hughes Hauls All</h1>
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
     </div>
   </header>
-  
-  <!-- Navigation Menu -->
   <nav id="nav-menu">
     <ul>
-      <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h2>Welcome to Hughes Hauls All</h2>
-      <p>Your Trusted Hauling &amp; Junk Removal Experts in Cookville, TN</p>
+    <div class="hero-content">
+      <h2>Your Junk Removal Experts in Cookville, TN</h2>
       <a href="#contact" class="btn">Get a Free Quote</a>
     </div>
   </section>
-  
-  <!-- Services Section with Junk Removal Related Images -->
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
       <div class="services-grid">
-        <!-- Residential Junk Removal -->
         <div class="service-item">
-          <img src="https://unsplash.com/photos/Yr4n8O_3UPc/download?force=true&w=600" alt="Residential Junk Removal" loading="lazy">
-          <h3><i class="fas fa-home"></i>Residential Junk Removal</h3>
-          <p>Tired of living with clutter? We’ll help you reclaim your home, garage, or shed by removing unwanted items efficiently and responsibly.</p>
+          <img src="https://unsplash.com/photos/D56TpVU8zng/download?force=true&w=600" alt="Residential Junk Removal">
+          <h3>Residential Junk Removal</h3>
         </div>
-        <!-- Furniture & Mattress Disposal -->
         <div class="service-item">
-          <img src="https://unsplash.com/photos/nGrfKmtwv24/download?force=true&w=600" alt="Furniture & Mattress Disposal" loading="lazy">
-          <h3><i class="fas fa-couch"></i>Furniture &amp; Mattress Disposal</h3>
-          <p>Upgrading your home or simply need to dispose of bulky items? We handle the heavy lifting and proper disposal of furniture, mattresses, and more.</p>
+          <img src="https://unsplash.com/photos/zcbb_xq8ArM/download?force=true&w=600" alt="Furniture & Mattress Disposal">
+          <h3>Furniture & Mattress Disposal</h3>
         </div>
-        <!-- Rental Property Cleanouts -->
         <div class="service-item">
-          <img src="https://unsplash.com/photos/Em4kSxP0g4w/download?force=true&w=600" alt="Rental Property Cleanouts" loading="lazy">
-          <h3><i class="fas fa-building"></i>Rental Property Cleanouts</h3>
-          <p>Prepare your property for new tenants or eliminate accumulated clutter. Our team makes rental property turnovers smooth and hassle‑free.</p>
+          <img src="https://unsplash.com/photos/NzFgmXfH1MQ/download?force=true&w=600" alt="Rental Property Cleanouts">
+          <h3>Rental Property Cleanouts</h3>
         </div>
-        <!-- Commercial Hauling -->
         <div class="service-item">
-          <img src="https://unsplash.com/photos/dBI_My696Rk/download?force=true&w=600" alt="Commercial Hauling" loading="lazy">
-          <h3><i class="fas fa-truck"></i>Commercial Hauling</h3>
-          <p>From office cleanouts to property management projects, we provide comprehensive hauling services for businesses throughout Cookville and the surrounding areas.</p>
+          <img src="https://unsplash.com/photos/OFMdXEN2Otc/download?force=true&w=600" alt="Commercial Hauling">
+          <h3>Commercial Hauling</h3>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- How It Works Section -->
-  <section id="how-it-works">
-    <div class="container">
-      <h2>How It Works</h2>
-      <ol>
-        <li><i class="fas fa-envelope"></i><strong>Request a Free Quote:</strong> Contact us today to discuss your needs and receive a free, no‑obligation estimate.</li>
-        <li><i class="fas fa-calendar-alt"></i><strong>Schedule Your Service:</strong> We work around your schedule to plan a convenient pick‑up time.</li>
-        <li><i class="fas fa-chair"></i><strong>Sit Back &amp; Relax:</strong> Our professional team arrives on time, handles all the heavy lifting, and ensures your space is left clean and clutter‑free.</li>
-        <li><i class="fas fa-thumbs-up"></i><strong>Enjoy Your New Space:</strong> With your unwanted items gone, you can enjoy a more organized, stress‑free environment.</li>
-      </ol>
-    </div>
-  </section>
-  
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Our Customers Say</h2>
-      <div class="testimonials">
-        <div class="testimonial-carousel">
-          <div class="testimonial">
-            <p>"Hughes Hauls All transformed my cluttered garage into a spacious, organized area. Their service was prompt and professional."</p>
-            <h4>– John D.</h4>
-          </div>
-          <div class="testimonial">
-            <p>"Excellent service! They handled everything with care, and I couldn't be happier with the results."</p>
-            <h4>– Mary S.</h4>
-          </div>
-          <div class="testimonial">
-            <p>"Reliable, efficient, and friendly. I highly recommend Hughes Hauls All for any hauling or junk removal needs."</p>
-            <h4>– Alex P.</h4>
-          </div>
-        </div>
-        <div class="testimonial-controls">
-          <button id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
-          <button id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FAQ Section -->
-  <section id="faq">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-question">What areas do you serve?</div>
-        <div class="faq-answer">
-          <p>We proudly serve Cookville, TN and the surrounding areas.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">How do I get a free quote?</div>
-        <div class="faq-answer">
-          <p>You can get a free quote by contacting us via our website form or giving us a call.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Do you recycle or donate items?</div>
-        <div class="faq-answer">
-          <p>Yes, whenever possible, we recycle and donate items to reduce waste.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Blog Section -->
-  <section id="blog">
-    <div class="container">
-      <h2>Our Blog</h2>
-      <!-- Blog Article 1 -->
-      <article class="blog-article">
-        <h3>The Ultimate Guide to Junk Removal in Cookville, TN: Tips for a Clutter-Free Home</h3>
-        <p>Are you feeling overwhelmed by clutter in your Cookville home? In this ultimate guide, we share expert advice on how to plan and execute a successful junk removal process. Learn the steps to sort, donate, recycle, and dispose of unwanted items so you can enjoy a clutter-free space.</p>
-        <p>Our guide covers everything from identifying the items you no longer need to preparing your home for a professional haul. Whether you’re a homeowner or renter, these tips will help you take control of your space and start your journey toward a cleaner, more organized home.</p>
-      </article>
-      <!-- Blog Article 2 -->
-      <article class="blog-article">
-        <h3>5 Essential Steps to Prepare Your Home for Professional Hauling Services</h3>
-        <ol>
-          <li><strong>Declutter Your Space:</strong> Start by removing small items and organizing them into categories.</li>
-          <li><strong>Separate Recyclable Items:</strong> Set aside items that can be recycled or donated.</li>
-          <li><strong>Label Fragile Items:</strong> Protect delicate items by marking them clearly.</li>
-          <li><strong>Clear Pathways:</strong> Ensure there is an unobstructed path for the hauling truck.</li>
-          <li><strong>Schedule a Consultation:</strong> Contact professionals to discuss your needs and receive a free quote.</li>
-        </ol>
-        <p>Following these five steps will streamline the process and help ensure that your hauling service is efficient and hassle‑free.</p>
-      </article>
-      <!-- Blog Article 3 -->
-      <article class="blog-article">
-        <h3>Decluttering Your Space: Top 10 Tips for a Stress-Free Home Transformation</h3>
-        <ol>
-          <li><strong>Start Small:</strong> Begin with one room or area at a time.</li>
-          <li><strong>Set Clear Goals:</strong> Define what a clutter-free space means to you.</li>
-          <li><strong>Sort Items by Category:</strong> Keep, donate, recycle, or throw away.</li>
-          <li><strong>Donate What You Can:</strong> Give usable items a second life.</li>
-          <li><strong>Recycle Responsibly:</strong> Follow local guidelines for disposal.</li>
-          <li><strong>Organize Regularly:</strong> Make decluttering a recurring task.</li>
-          <li><strong>Create a Maintenance Plan:</strong> Set aside time each month to tidy up.</li>
-          <li><strong>Utilize Storage Solutions:</strong> Invest in shelves, boxes, or organizers.</li>
-          <li><strong>Involve Family Members:</strong> Work together to achieve a clutter-free home.</li>
-          <li><strong>Celebrate Your Progress:</strong> Recognize your achievements and reward yourself.</li>
-        </ol>
-        <p>These ten tips will guide you through transforming your home into a stress‑free, organized space that you can truly enjoy.</p>
-      </article>
-      <!-- Blog Article 4 -->
-      <article class="blog-article">
-        <h3>How Professional Junk Removal Benefits Rental Property Owners in Cookville, TN</h3>
-        <p>Rental property owners often face the challenge of quickly turning over properties for new tenants. Professional junk removal not only declutters the space but also enhances the property's appeal and safety.</p>
-        <p>By investing in expert hauling services, landlords can speed up property turnover, reduce vacancy periods, and maintain a clean, welcoming environment that attracts quality tenants. Our team ensures that all items are disposed of responsibly—helping you save time and money while boosting your rental property’s marketability.</p>
-      </article>
-      <!-- Blog Article 5 -->
-      <article class="blog-article">
-        <h3>Eco-Friendly Junk Removal: How We Recycle and Donate to Give Back to Cookville, TN</h3>
-        <p>At Hughes Hauls All, we are committed to sustainability. Our eco-friendly junk removal services ensure that as much material as possible is recycled or donated to local charities.</p>
-        <p>Learn about our green initiatives, including partnering with recycling centers and community organizations. By choosing eco‑friendly junk removal, you not only declutter your home but also contribute to a cleaner, greener Cookville. Discover how our responsible practices help reduce landfill waste and give back to the community.</p>
-      </article>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <h2>Ready to Declutter?</h2>
-      <p>Don’t let unwanted items take over your space. At Hughes Hauls All, we’re passionate about helping you simplify your life with efficient, reliable hauling services. Contact us today for your free quote and take the first step toward a cleaner, clutter‑free home or business!</p>
-      <div class="contact-form">
-        <form action="https://example.com/submit-form" method="post" id="contactForm">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <input type="submit" value="Send Message">
-        </form>
-      </div>
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
     </div>
   </section>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Hughes Hauls All. All Rights Reserved.</p>
-      <p>Serving Cookville, TN with pride and commitment to quality service!</p>
-    </div>
-  </footer>
-  
-  <!-- Back to Top Button -->
-  <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-  
-  <script>
-    // Mobile Navigation Toggle: Toggle 'active' class on <nav>
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-    
-    // Smooth Scrolling for Navigation Links and Buttons
-    document.querySelectorAll('nav a, .btn').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute('href'));
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-        if (navMenu.classList.contains('active')) {
-          navMenu.classList.remove('active');
-        }
-      });
-    });
-    
-    // Scroll Progress Indicator
-    const progressBar = document.getElementById('scroll-progress');
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      progressBar.style.width = scrollPercent + '%';
-    });
-    
-    // Back to Top Button Functionality
-    const backToTopBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
-    });
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Testimonial Carousel Functionality
-    const testimonialCarousel = document.querySelector('.testimonial-carousel');
-    const testimonials = document.querySelectorAll('.testimonial');
-    let currentTestimonial = 0;
-    const totalTestimonials = testimonials.length;
-    const nextButton = document.getElementById('nextTestimonial');
-    const prevButton = document.getElementById('prevTestimonial');
-    
-    function updateTestimonial() {
-      testimonialCarousel.style.transform = 'translateX(-' + (currentTestimonial * 100) + '%)';
-    }
-    nextButton.addEventListener('click', () => {
-      currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-      updateTestimonial();
-    });
-    prevButton.addEventListener('click', () => {
-      currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
-      updateTestimonial();
-    });
-    // Auto-rotate testimonials every 5 seconds
-    setInterval(() => {
-      currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-      updateTestimonial();
-    }, 5000);
-    
-    // FAQ Toggle Functionality
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        item.classList.toggle('active');
-        question.classList.toggle('active');
-      });
-    });
-    
-    // Optional: Form Submission Alert (Replace with your preferred form processing)
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for reaching out! We will get back to you soon.');
-      contactForm.reset();
-    });
-  </script>
 </body>
 </html>
