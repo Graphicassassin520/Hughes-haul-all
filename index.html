@@ -30,7 +30,7 @@
       max-width: 1100px;
       margin: auto;
     }
-    /* Header & Navigation */
+    /* Navigation */
     header {
       background: var(--white);
       padding: 15px 0;
@@ -86,10 +86,12 @@
         margin: 10px 0;
       }
     }
-    /* Hero Section */
+    /* Hero Section - FIXED BACKGROUND IMAGE */
     .hero {
       height: 90vh;
-      background: url("https://source.unsplash.com/1600x900/?junk-removal") no-repeat center center/cover;
+      background: url("https://source.unsplash.com/1600x900/?junk-removal,trash,cleaning") no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -122,27 +124,25 @@
       background: var(--tn-orange-hover);
     }
     /* Services Section */
+    .services {
+      padding: 50px 0;
+      text-align: center;
+    }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 50px 0;
     }
     .service-item {
-      text-align: center;
-      border: 1px solid var(--tn-orange);
+      background: var(--light-gray);
       border-radius: 5px;
+      padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding-bottom: 15px;
     }
     .service-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-    }
-    .service-item h3 {
-      padding: 15px;
-      color: var(--tn-orange);
     }
     /* FAQ Section */
     .faq {
@@ -162,10 +162,9 @@
       border-radius: 5px;
     }
     /* Contact Form */
-    .contact-form {
+    .contact {
       background: var(--light-gray);
-      padding: 30px;
-      border-radius: 5px;
+      padding: 50px 0;
     }
     .contact-form input,
     .contact-form textarea {
@@ -204,17 +203,31 @@
     </div>
   </section>
 
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?junk" alt="Junk Removal">
+          <h3>Residential Junk Removal</h3>
+        </div>
+        <div class="service-item">
+          <img src="https://source.unsplash.com/600x400/?trash" alt="Trash Disposal">
+          <h3>Furniture & Mattress Disposal</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="faq">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-question">How much do your services cost?</div>
-      <div class="faq-answer">Our pricing depends on the type and volume of junk. Contact us for a free estimate.</div>
-      <div class="faq-question">Do you recycle?</div>
-      <div class="faq-answer">Yes! We recycle and donate items whenever possible.</div>
+      <div class="faq-answer">Pricing depends on the volume of junk. Contact us for a free estimate.</div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <h2>Contact Us</h2>
       <form class="contact-form">
