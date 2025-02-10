@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hughes Hauls All | Junk Removal in Cookville, TN</title>
-  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -90,7 +89,7 @@
     /* Hero Section */
     .hero {
       height: 90vh;
-      background: url("https://unsplash.com/photos/5IJ9UaT6tLk/download?force=true&w=1600") no-repeat center center/cover;
+      background: url("https://source.unsplash.com/1600x900/?junk-removal") no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -162,16 +161,6 @@
       background: var(--light-gray);
       border-radius: 5px;
     }
-    /* Blog Section */
-    .blog {
-      background: var(--light-gray);
-      padding: 50px 0;
-    }
-    .blog-article {
-      margin-bottom: 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 15px;
-    }
     /* Contact Form */
     .contact-form {
       background: var(--light-gray);
@@ -203,7 +192,6 @@
     <ul>
       <li><a href="#services">Services</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -226,18 +214,6 @@
     </div>
   </section>
 
-  <section id="blog">
-    <div class="container">
-      <h2>Latest Blog Posts</h2>
-      <div class="blog-article">
-        <h3>5 Ways to Declutter Your Home Efficiently</h3>
-      </div>
-      <div class="blog-article">
-        <h3>How to Dispose of Old Furniture the Right Way</h3>
-      </div>
-    </div>
-  </section>
-
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
@@ -253,6 +229,12 @@
   <script>
     document.getElementById('nav-toggle').addEventListener('click', function() {
       document.getElementById('nav-menu').classList.toggle('active');
+    });
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        question.nextElementSibling.style.display = question.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+      });
     });
   </script>
 </body>
